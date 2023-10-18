@@ -15,6 +15,7 @@ División de numero1 entre numero2.
 const numero1 = 1;
 const numero2 = 2;
 
+console.log("Ej1:");
 console.log(numero1 + numero2);
 console.log(numero1 - numero2);
 console.log(numero1 * numero2);
@@ -26,11 +27,26 @@ Ejercicio 2: Concatenación de Cadenas
 
 Crea dos variables, nombre y apellido, y asígnales valores de tu elección. Luego, crea una tercera variable llamada nombreCompleto que contenga la concatenación de nombre y apellido. Muestra nombreCompleto en la consola.
 
+*/
+
+let nombre = "cacho";
+let apellido = "medina";
+let nombreCompleto = nombre + " " + apellido;
+
+console.log(`Ej2: ${nombreCompleto}`);
+
+/*
+
 Ejercicio 3: Conversión de Grados Celsius a Fahrenheit
 
 Crea una variable llamada gradosCelsius y asígnale un valor en grados Celsius. Luego, utiliza la fórmula de conversión para calcular los grados Fahrenheit y almacénalos en una variable llamada gradosFahrenheit. Muestra ambos valores en la consola.
 
-‌
 
+Formula
+(0 °C × 9/5) + 32 = 32 °F
 
 */
+
+let gradosCelsius = 20;
+let gradosFahrenheit = gradosCelsius * (9 / 5) + 32;
+console.log(`Ej3: ${gradosFahrenheit}`);
