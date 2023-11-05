@@ -108,7 +108,7 @@ function ejercicio5() {
     while (dni < 0 || dni > 99999999 || isNaN(dni)) {
         alert("Numero ingresado incorrecto");
         dni = parseInt(prompt("ingrese dni valido:"));
-    } 
+    }
     let resto = dni % 23;
     document.write(letras[resto]);
 }
@@ -182,6 +182,7 @@ function piramide3() {
 
 function writeNumbers() {
     let c = 0;
+    document.write("<ul style='list-style:none' >");
     for (let index = 1; index <= 500; index++) {
         let exit = `${index}`;
         if (index % 4 === 0) {
@@ -192,10 +193,13 @@ function writeNumbers() {
         }
         c++;
         console.log(exit);
+        document.write(`<li>${exit}</li>`);
         if (c % 5 === 0) {
             console.log("-----------------------------");
+            document.write("<li>---------------------</li>");
         }
     }
+    document.write("<ul>");
 }
 
 /*
@@ -239,6 +243,7 @@ function findMayor() {
 function random() {
     const random = Math.floor(Math.random() * 99) + 1;
     console.log(random);
+    document.write(random);
 }
 
 /*

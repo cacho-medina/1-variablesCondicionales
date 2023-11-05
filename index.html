@@ -7,25 +7,26 @@
         <style>
             button {
                 cursor: pointer;
+                padding: 10px 5px;
+                border: unset;
+                margin: 5px;
             }
             .btn-tp1 {
                 background-color: #d9d94b;
-                padding: 10px 5px;
                 color: #000;
-                border: unset;
-                margin: 5px;
             }
             .btn-tp2 {
                 background-color: #c35e47;
-                padding: 10px 5px;
                 color: #fff;
-                border: unset;
-                margin: 5px;
+            }
+            .btn-tp3 {
+                background-color: rgb(51, 98, 163);
+                color: #fff;
             }
         </style>
     </head>
     <body>
-        <div>
+        <div class="tp1">
             <h2>TP 1</h2>
             <button class="btn-tp1" onclick="showAlert()">
                 muestra alerta
@@ -55,7 +56,7 @@
                 divisible por todos
             </button>
         </div>
-        <div>
+        <div class="tp2">
             <h2>TP 2</h2>
             <button class="btn-tp2" onclick="esMayor()">ejercicio 1</button>
             <button class="btn-tp2" onclick="postNotas()">ejercicio 2</button>
@@ -89,7 +90,20 @@
                 ejercicio 17
             </button>
         </div>
+        <div class="tp3">
+            <h2>TP 3</h2>
+            <button class="btn-tp3" onclick="ej1()">ejercicio 1</button>
+            <button class="btn-tp3" onclick="ej2()">ejercicio 2</button>
+            <button class="btn-tp3" disabled onclick="ej3()">
+                ejercicio 3
+            </button>
+            <button class="btn-tp3" onclick="ej4()">ejercicio 4</button>
+            <button class="btn-tp3" onclick="ej5()">ejercicio 5</button>
+            <button class="btn-tp3" onclick="ej6()">ejercicio 6</button>
+            <button class="btn-tp3" onclick="ej7()">ejercicio 7</button>
+        </div>
         <script src="./tp1/tp1.js"></script>
         <script src="./tp2/tp2.js"></script>
+        <script src="./tp3/tp3.js"></script>
     </body>
 </html>
