@@ -64,19 +64,27 @@ const numRandom = () => Math.floor(Math.random() * 6) + 1;
 
 const ej3 = () => {
     let suma = 0;
-    let aux = 0;
-    document.write("<table><tr>");
+    let aux = [];
+
     for (let index = 0; index < 50; index++) {
         suma = numRandom() + numRandom();
-        for (let j = 1; j <= 12; j++) {
-            if (suma === j) {
-                aux++;
-            }
-        }
-        document.write(`<td>${suma}</td>`);
-        document.write(`<td>${aux}</td>`);
+        aux.push(suma);
     }
-    document.write("</tr></table>");
+
+    const numSumados = new Set(aux);
+    const sumados = [...numSumados];
+
+    document.write("<table>");
+
+    for (let index = 0; index < sumados.length; index++) {
+        document.write("<tr>");
+        document.write(`<td>${sumados[index]}</td>`);
+        const finded = aux.filter((num) => sumados[index] === num);
+        document.write(`<td>${finded.length}</td>`);
+        document.write("</tr>");
+    }
+
+    document.write("</table>");
 };
 
 /*
