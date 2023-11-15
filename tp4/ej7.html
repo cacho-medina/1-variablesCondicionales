@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Agenda</title>
+        <style>
+            .show {
+                display: block;
+            }
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Menu</h1>
+        <button onclick="show()" class="btn">Abrir agenda</button>
+        <div class="hide">
+            <select name="" id="option">
+                <option value="">...</option>
+                <option value="Añadir">Añadir</option>
+                <option value="Buscar">Buscar</option>
+                <option value="Eliminar">Eliminar</option>
+                <option value="Listar">Listar</option>
+            </select>
+            <button onclick="actions()" class="boton">==></button>
+        </div>
+        <script src="./ej7.js"></script>
+    </body>
+</html>
