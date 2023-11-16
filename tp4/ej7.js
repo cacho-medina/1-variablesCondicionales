@@ -59,6 +59,7 @@ class Agenda {
             this.existeContacto(contacto);
         } else {
             console.log(this.agendaLLena());
+            alert(this.agendaLLena());
         }
     }
     existeContacto(contacto) {
@@ -71,11 +72,17 @@ class Agenda {
             console.log("contacto creado");
         } else {
             console.log("el contacto ya existe");
+            alert("el contacto ya existe");
         }
     }
     listarContacto() {
-        this.#contactos.map((contato) =>
-            console.log(`${contato.nombre} | ${contato.numero}`)
+        this.#contactos.map((contato) => {
+            console.log(`${contato.nombre} | ${contato.numero}`);
+        });
+        alert(
+            `${this.#contactos.map((contato) => {
+                return `${contato.numero} | ${contato.nombre}\n`;
+            })}`
         );
     }
     buscarContacto(nombre) {
@@ -84,9 +91,11 @@ class Agenda {
         );
         if (contacto) {
             console.log(`${contacto.nombre} | ${contacto.numero}`);
+            alert(`${contacto.nombre} | ${contacto.numero}`);
             return true;
         } else {
             console.log("No se encontro el contacto");
+            alert("No se encontro el contacto");
             return false;
         }
     }
@@ -96,8 +105,11 @@ class Agenda {
                 (contact) => contact.nombre !== contacto
             );
             this.contactos = contactosRestantes;
+            alert("contacto eliminado");
+            console.log("contacto eliminado");
         } else {
             console.log("No se elimino el contacto");
+            alert("No se elimino el contacto");
         }
     }
     agendaLLena() {
@@ -112,12 +124,14 @@ class Agenda {
 
 function actions() {
     const option = document.getElementById("option").value;
+
     switch (option) {
         case "Añadir":
             agenda.aniadirContacto(crearContacto());
             break;
         case "Listar":
             agenda.listarContacto();
+
             break;
         case "Eliminar":
             agenda.eliminarContacto(
